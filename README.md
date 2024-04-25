@@ -6,7 +6,7 @@
 ```
 SELECT * FROM tbdep;
 ```
-![tbdep](https://github.com/Andrejmrocha/Tratamento-Dados/blob/76bc483de7688c3ea782d8aa22d0bd1f114ee632/Assets/image.png)
+![tbdep](https://github.com/Andrejmrocha/Tratamento-Dados/blob/abcf9953ecd3de4363923783ecfc9ba1fcfd169f/Assets/tbdep.png)
 
 <hr>
 
@@ -14,7 +14,7 @@ SELECT * FROM tbdep;
 ```
 SELECT * FROM tbpro;
 ```
-![tbpro](https://github.com/Andrejmrocha/Tratamento-Dados/blob/76bc483de7688c3ea782d8aa22d0bd1f114ee632/Assets/image.png)
+![tbpro](https://github.com/Andrejmrocha/Tratamento-Dados/blob/abcf9953ecd3de4363923783ecfc9ba1fcfd169f/Assets/tbpro.png)
 
 <hr>
 
@@ -22,7 +22,7 @@ SELECT * FROM tbpro;
 ```
 SELECT * FROM tbvdd;
 ```
-![tbvdd](https://github.com/Andrejmrocha/Tratamento-Dados/blob/76bc483de7688c3ea782d8aa22d0bd1f114ee632/Assets/image.png)
+![tbvdd](https://github.com/Andrejmrocha/Tratamento-Dados/blob/abcf9953ecd3de4363923783ecfc9ba1fcfd169f/Assets/tbvdd.png)
 
 <hr>
 
@@ -30,7 +30,7 @@ SELECT * FROM tbvdd;
 ```
 SELECT * FROM tbven;
 ```
-![tbven](https://github.com/Andrejmrocha/Tratamento-Dados/blob/76bc483de7688c3ea782d8aa22d0bd1f114ee632/Assets/image.png)
+![tbven](https://github.com/Andrejmrocha/Tratamento-Dados/blob/abcf9953ecd3de4363923783ecfc9ba1fcfd169f/Assets/tbven.png)
 
 <hr>
 
@@ -38,4 +38,4 @@ SELECT * FROM tbven;
 ```
 SELECT * FROM tbven_item;
 ```
-![tbven_item](https://github.com/Andrejmrocha/Tratamento-Dados/blob/76bc483de7688c3ea782d8aa22d0bd1f114ee632/Assets/image.png)
+![tbven_item](https://github.com/Andrejmrocha/Tratamento-Dados/blob/abcf9953ecd3de4363923783ecfc9ba1fcfd169f/Assets/tbven_item.png)
