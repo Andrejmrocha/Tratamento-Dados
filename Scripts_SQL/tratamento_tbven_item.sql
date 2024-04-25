@@ -1,4 +1,4 @@
-select * from tbven_item
+SELECT * FROM tbven_item
 
 EXEC sp_rename 'tbven_item', 'tb_venda_produto'
 
@@ -12,7 +12,7 @@ EXEC sp_rename 'tb_venda_produto.cdven', 'Codigo_Venda'
 UPDATE tb_venda_produto
 SET Valor_Total_Venda = Quantidade_Venda * Valor_Unitario_Venda
 
-select * from tb_venda_produto
+SELECT * FROM tb_venda_produto
 
 
 

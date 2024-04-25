@@ -22,9 +22,20 @@ UPDATE tb_vendedores
 SET Nome_Vendedor =	 TRIM(@Nome)
 WHERE Codigo_Vendedor = 5
 
-select * from tb_vendedores
 
 UPDATE tb_vendedores
 SET Nome_Vendedor =	 'Vendedor 11'
 WHERE Codigo_Vendedor = 11
 
+ALTER TABLE tb_vendedores
+ALTER COLUMN Sexo_Vendedor VARCHAR(1)
+
+UPDATE tb_vendedores
+SET Sexo_Vendedor = 'M'
+WHERE Sexo_Vendedor = '1'
+
+UPDATE tb_vendedores
+SET Sexo_Vendedor = 'F'
+WHERE Sexo_Vendedor = '0'
+
+SELECT * FROM tb_vendedores

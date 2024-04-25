@@ -1,4 +1,4 @@
-select * from tbven
+SELECT * FROM tbven
 
 EXEC sp_rename 'tbven', 'tb_vendas'
 
@@ -27,4 +27,4 @@ CASE
 	ELSE Status_Venda
 END
 
-select * from tb_vendas
+SELECT * FROM tb_vendas

@@ -1,5 +1,3 @@
-select * from tbdep
-
 EXEC sp_rename 'tbdep', 'tb_dependentes'
 
 EXEC sp_rename 'tb_dependentes.cddep', 'Codigo_Dependente'
@@ -15,4 +13,4 @@ UPDATE tb_dependentes
 SET Sexo_Dependente = TRIM(@Sexo)
 WHERE Codigo_Dependente = 3
 
-select * from tb_dependentes
+SELECT * FROM tb_dependentes
