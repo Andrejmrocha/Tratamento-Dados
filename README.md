@@ -4,4 +4,4 @@
 
 ## Tabela Dependentes
 
-[](Assets/image.png)
+[](https://github.com/Andrejmrocha/Tratamento-Dados/blob/76bc483de7688c3ea782d8aa22d0bd1f114ee632/Assets/image.png)
