@@ -211,3 +211,120 @@ SELECT * FROM tb_venda_produto
 
 ![tb_vendas_item](https://github.com/Andrejmrocha/Tratamento-Dados/blob/976812f7653653c270f21be1a27504cab63ab9d2/Assets/tbvendas_item.png)
 
+## Date Warehouse
+
+Para a criação do Date Warehouse vou instanciar um novo banco de dados
+```
+USE MASTER;
+CREATE DATABASE DW_2;
+```
+
+Iniciando a criação das dimensões
+* Cliente
+```
+USE AulaDB
+
+SELECT DISTINCT
+	Codigo_Cliente AS 'Codigo',
+	Nome_Cliente AS 'Nome',
+	Idade_Cliente AS 'Idade',
+	Classificação_Cliente AS 'Classificação',
+	Sexo_Cliente AS 'Sexo',
+	Cidade_Cliente AS 'Cidade',
+	Estado_Cliente AS 'Estado',
+	Pais_Cliente AS 'País'
+INTO DW_2..Dim_Clientes
+FROM tb_vendas
+```
+
+* Dependentes
+```
+USE AulaDB
+
+SELECT DISTINCT
+	Codigo_Dependente AS 'Codigo',
+	Nome_Dependente AS 'Nome',
+	Data_Nascimento_Dependente AS 'Data_Nascimento',
+	Sexo_Dependente AS 'Sexo'
+INTO DW_2..Dim_Dependente
+FROM tb_dependentes
+```
+
+* Produtos
+```
+USE AulaDB
+
+SELECT DISTINCT
+	Codigo_Produto AS 'Codigo',
+	Nome_Produto AS 'Nome',
+	Tipo_Produto AS 'Tipo',
+	Unidade_Produto AS 'Unidade'
+INTO DW_2..Dim_Produto
+FROM tb_produtos
+```
+
+* Vendedores
+```
+USE AulaDB
+
+SELECT DISTINCT
+	Codigo_Vendedor AS 'Codigo',
+	Nome_Vendedor AS 'Nome',
+	Sexo_Vendedor AS 'Sexo',
+	Percentual_Comissao AS 'Comissao_percentual',
+	Matricula_Funcionario AS 'Matricula'
+INTO DW_2..Dim_Vendedores
+FROM tb_vendedores
+```
+
+* Calendário
+```
+USE DW_2
+CREATE TABLE Dim_Calendario (
+    Data DATE PRIMARY KEY,
+    Ano INT,
+    Mes INT,
+    Dia INT,
+    Dia_Semana INT,
+    Nome_Dia VARCHAR(20),
+    Nome_Mes VARCHAR(20),
+    Trimestre INT,
+    Semestre INT
+);
+
+DECLARE @StartDate DATE = '2010-01-01';
+DECLARE @EndDate DATE = '2030-12-31';
+
+WHILE @StartDate <= @EndDate
+BEGIN
+    INSERT INTO Dim_Calendario (Data, Ano, Mes, Dia, Dia_Semana, Nome_Dia, Nome_Mes, Trimestre, Semestre)
+    SELECT
+        @StartDate AS Data,
+        YEAR(@StartDate) AS Ano,
+        MONTH(@StartDate) AS Mes,
+        DAY(@StartDate) AS Dia,
+        DATEPART(WEEKDAY, @StartDate) AS Dia_Semana,
+        DATENAME(WEEKDAY, @StartDate) AS Nome_Dia,
+        DATENAME(MONTH, @StartDate) AS Nome_Mes,
+        CEILING(MONTH(@StartDate) / 3.0) AS Trimestre,
+        CEILING(MONTH(@StartDate) / 6.0) AS Semestre;
+
+    SET @StartDate = DATEADD(DAY, 1, @StartDate);
+END
+```
+
+Finalizando com fato Venda
+```
+USE AulaDB;
+
+SELECT DISTINCT
+	Codigo_Venda AS 'Codigo',
+	Data_Venda AS 'Data',
+	Codigo_Cliente AS 'Codigo_Cliente',
+	canal AS 'Canal_venda',
+	Status_Venda AS 'Status',
+	deleted AS 'Deletada',
+	Codigo_Vendedor AS 'Codigo_Vendedor'
+INTO DW_2..Fato_Vendas
+FROM tb_vendas;
+```
