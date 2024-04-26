@@ -318,7 +318,7 @@ BEGIN
     SET @StartDate = DATEADD(DAY, 1, @StartDate);
 END
 ```
-![Dim_Cal](https://github.com/Andrejmrocha/Tratamento-Dados/blob/3f8d32f9bc7015065227e9f85bd7cd06d3ef1962/Assets/Dim_Calendario.png)
+![Dim_Cal](https://github.com/Andrejmrocha/Tratamento-Dados/blob/83da02d50b87c9c3b725f4981579f1204b1cbc66/Assets/Dim_Calendario.png)
 
 Finalizando com fato Venda
 ```
