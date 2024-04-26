@@ -65,7 +65,7 @@ WHERE Codigo_Dependente = 3
 ```
 SELECT * FROM tb_dependentes
 ```
-![tb_dependentes]()
+![tb_dependentes](https://github.com/Andrejmrocha/Tratamento-Dados/blob/976812f7653653c270f21be1a27504cab63ab9d2/Assets/tbdependentes.png)
 
 ## Tratamento - Tabela Produtos
 Buscando uma melhor compreensão dos dados, vou renomear o nome das colunas, pois todas estão abreviadas. 
@@ -90,7 +90,7 @@ DELETE FROM tb_produtos WHERE Tipo_Produto IS NULL
 ```
 SELECT * FROM tb_produtos
 ```
-![tb_produtos]()
+![tb_produtos](https://github.com/Andrejmrocha/Tratamento-Dados/blob/976812f7653653c270f21be1a27504cab63ab9d2/Assets/tbprodutos.png)
 
 ## Tratamento - Tabela Vendedores
 Buscando uma melhor compreensão dos dados, vou renomear o nome das colunas, pois todas estão abreviadas. 
@@ -146,7 +146,7 @@ WHERE Sexo_Vendedor = '0'
 ```
 SELECT * FROM tb_vendedores
 ```
-![tb_vendedores]()
+![tb_vendedores](https://github.com/Andrejmrocha/Tratamento-Dados/blob/976812f7653653c270f21be1a27504cab63ab9d2/Assets/tbvendedores.png)
 
 ## Tratamento - Tabela Vendas
 Buscando uma melhor compreensão dos dados, vou renomear o nome das colunas, pois todas estão abreviadas. 
@@ -183,7 +183,7 @@ END
 ```
 SELECT * FROM tb_vendas
 ```
-![tb_vendas]()
+![tb_vendas](https://github.com/Andrejmrocha/Tratamento-Dados/blob/976812f7653653c270f21be1a27504cab63ab9d2/Assets/tbvendas.png)
 
 ## Tratamento - Tabela Vendas_Item
 Buscando uma melhor compreensão dos dados, vou renomear o nome das colunas, pois todas estão abreviadas. Além disso vou padronizar a nomenclatura produto no lugar de item
@@ -204,8 +204,9 @@ Atualizando os valores totais de venda
 UPDATE tb_venda_produto
 SET Valor_Total_Venda = Quantidade_Venda * Valor_Unitario_Venda
 ```
+
 ```
 SELECT * FROM tb_venda_produto
 ```
-![tb_vendas_item]()
+![tb_vendas_item](https://github.com/Andrejmrocha/Tratamento-Dados/blob/976812f7653653c270f21be1a27504cab63ab9d2/Assets/tbvendas_item.png)
 
