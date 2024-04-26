@@ -236,6 +236,7 @@ SELECT DISTINCT
 INTO DW_2..Dim_Clientes
 FROM tb_vendas
 ```
+![Dim_Cliente](https://github.com/Andrejmrocha/Tratamento-Dados/blob/3f8d32f9bc7015065227e9f85bd7cd06d3ef1962/Assets/Dim_Cliente.png)
 
 * Dependentes
 ```
@@ -251,6 +252,7 @@ SELECT DISTINCT
 INTO DW_2..Dim_Dependente
 FROM tb_dependentes
 ```
+![Dim_Dependentes](https://github.com/Andrejmrocha/Tratamento-Dados/blob/3f8d32f9bc7015065227e9f85bd7cd06d3ef1962/Assets/Dim_Dependente.png)
 
 * Produtos
 ```
@@ -264,6 +266,7 @@ SELECT DISTINCT
 INTO DW_2..Dim_Produto
 FROM tb_produtos
 ```
+![Dim_Produtos](https://github.com/Andrejmrocha/Tratamento-Dados/blob/3f8d32f9bc7015065227e9f85bd7cd06d3ef1962/Assets/Dim_Produto.png)
 
 * Vendedores
 ```
@@ -278,6 +281,7 @@ SELECT DISTINCT
 INTO DW_2..Dim_Vendedores
 FROM tb_vendedores
 ```
+![Dim_Vendedores](https://github.com/Andrejmrocha/Tratamento-Dados/blob/3f8d32f9bc7015065227e9f85bd7cd06d3ef1962/Assets/Dim_Vendedor.png)
 
 * Calendário
 ```
@@ -314,6 +318,7 @@ BEGIN
     SET @StartDate = DATEADD(DAY, 1, @StartDate);
 END
 ```
+![Dim_Cal](https://github.com/Andrejmrocha/Tratamento-Dados/blob/3f8d32f9bc7015065227e9f85bd7cd06d3ef1962/Assets/Dim_Calendario.png)
 
 Finalizando com fato Venda
 ```
@@ -330,3 +335,5 @@ SELECT DISTINCT
 INTO DW_2..Fato_Vendas
 FROM tb_vendas;
 ```
+
+![Fato_Vendas](https://github.com/Andrejmrocha/Tratamento-Dados/blob/3f8d32f9bc7015065227e9f85bd7cd06d3ef1962/Assets/Fato_Vendas.png)
