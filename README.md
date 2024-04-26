@@ -200,7 +200,7 @@ EXEC sp_rename 'tb_venda_produto.cdven', 'Codigo_Venda'
 ```
 
 Atualizando os valores totais de venda
-````
+```
 UPDATE tb_venda_produto
 SET Valor_Total_Venda = Quantidade_Venda * Valor_Unitario_Venda
 ```
@@ -208,5 +208,6 @@ SET Valor_Total_Venda = Quantidade_Venda * Valor_Unitario_Venda
 ```
 SELECT * FROM tb_venda_produto
 ```
+
 ![tb_vendas_item](https://github.com/Andrejmrocha/Tratamento-Dados/blob/976812f7653653c270f21be1a27504cab63ab9d2/Assets/tbvendas_item.png)
 
